@@ -44,10 +44,21 @@ print("Determinant:", linalg.det(A))
 
 
 
-from scipy import linalg
 import numpy as np
 
-A = np.array([[1,2],[3,4]])
+data = np.array([10,20,20,30])
 
-print("Inverse:", linalg.inv(A))
-print("Determinant:", linalg.det(A))
+print("Mean:", np.mean(data))
+print("Median:", np.median(data))
+print("Std Dev:", np.std(data))
+
+data = data * 2
+print("After multiplication:", data
+a = np.array([1,2,3])
+b = 2
+
+print(a + b) #[3 4 5]
+arr = np.array([[1,2],[3,4]])
+
+print(arr.shape) #(2,2)
+      
