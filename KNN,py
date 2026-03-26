@@ -1,0 +1,41 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.metrics import mean_squared_error
+
+# Dataset
+data = {
+    "Area": [1000,1500,2000,2500,3000],
+    "Bedrooms": [2,3,3,4,4],
+    "Age": [10,5,8,3,1],
+    "Price": [200000,300000,350000,400000,500000]
+}
+
+df = pd.DataFrame(data)
+
+# Features & Target
+X = df[["Area","Bedrooms","Age"]]
+y = df["Price"]
+
+# Split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Model
+model = KNeighborsRegressor(n_neighbors=3)
+
+# Train
+model.fit(X_train, y_train)
+
+# Predict
+y_pred = model.predict(X_test)
+
+print("Predictions:", y_pred)
+
+# Evaluate
+print("MSE:", mean_squared_error(y_test, y_pred))
+
+# Predict new house
+new_house = [[2200, 3, 5]]
+predicted_price = model.predict(new_house)
+
+print("Predicted Price:", predicted_price)
