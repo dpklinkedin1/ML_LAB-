@@ -1,1 +1,52 @@
+# Simple Linear Regression from scratch
 
+# Input data
+x = [1, 2, 3, 4, 5]
+y = [2, 4, 5, 4, 5]
+
+n = len(x)
+
+# Step 1: Calculate mean
+mean_x = sum(x) / n
+mean_y = sum(y) / n
+
+# Step 2: Calculate slope (m)
+numerator = sum((x[i] - mean_x) * (y[i] - mean_y) for i in range(n))
+denominator = sum((x[i] - mean_x) ** 2 for i in range(n))
+
+m = numerator / denominator
+
+# Step 3: Calculate intercept (b)
+b = mean_y - m * mean_x
+
+# Step 4: Predictions
+print("Slope (m):", m)
+print("Intercept (b):", b)
+
+# Predict new value
+x_new = 6
+y_pred = m * x_new + b
+
+print("Predicted value for x=6:", y_pred)
+
+
+
+#-------------- we can also draw a graph for this ------------------
+
+import matplotlib.pyplot as plt
+x = [1,2,3,4,5]
+y = [2,4,5,4,5]
+
+m = 0.6
+b = 2.2
+
+y_line = [m*i + b for i in x]
+
+plt.scatter(x,y)
+plt.plot(x,y_line)
+
+plt.title("Linear Regression")
+plt.xlabel("X")
+plt.ylabel("Y")
+
+plt.show()
