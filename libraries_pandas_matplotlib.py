@@ -14,7 +14,8 @@ df = pd.DataFrame(data)
 print("DataFrame:",df)
 
 avg = df["marks"].mean()
-print("Average marks = ",avg)
+print("Av
+erage marks = ",avg)
 
 max = df["marks"].max()
 print("Maximum marks = ",max)
