@@ -61,8 +61,6 @@ print("Normalizartion: Z-score :",stats.zscore(data))
 
 
 
-sci_np_stat_math.py
-Displaying sci_np_stat_math.py.
 
 
 
