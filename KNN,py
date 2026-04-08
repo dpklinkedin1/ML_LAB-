@@ -1,27 +1,25 @@
+from sklearn.neighbors import KNeighborsClassifier
 import numpy as np
-from sklearn.cluster import KMeans
 
-# Data (2D points)
+# Input features [height, weight]
 X = np.array([
-    [1, 2],
-    [2, 3],
-    [3, 4],
-    [8, 7],
-    [9, 8],
-    [10, 9]
+    [150, 50],
+    [160, 60],
+    [170, 65],
+    [180, 80]
 ])
 
-# Create model (K = 2 clusters)
-model = KMeans(n_clusters=2)
+# Output (0 = Female, 1 = Male)
+y = np.array([0, 0, 1, 1])
+
+# Create model (K = 3)
+model = KNeighborsClassifier(n_neighbors=3)
 
 # Train model
-model.fit(X)
+model.fit(X, y)
 
-# Get cluster labels
-labels = model.labels_
+# Predict
+new_person = np.array([[165, 55]])
+result = model.predict(new_person)
 
-# Get centroids
-centroids = model.cluster_centers_
-
-print("Cluster Labels =", labels)
-print("Centroids =", centroids)
+print("Predicted Class =", result[0])
