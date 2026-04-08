@@ -1,3 +1,99 @@
+
+
+Skip to content
+Using Gmail with screen readers
+1 of 2,502
+codes
+Inbox
+
+praveen edu123 <praveenedu0@gmail.com>
+Attachments
+10:27 AM (3 minutes ago)
+to me
+
+
+ 6 Attachments
+  •  Scanned by Gmail
+
+Mail Delivery Subsystem <mailer-daemon@googlemail.com>
+10:27 AM (3 minutes ago)
+to me
+
+Error Icon
+Message blocked
+Your message to praveenedu0@gmail.com has been blocked. See technical details below for more information.
+LEARN MORE
+The response was:
+Message rejected. For more information, go to https://support.google.com/mail/answer/69585
+
+import math
+import numpy as np 
+from scipy import stats
+import statistics
+data = list(map(float, input("Enter number:").split()))
+#---------------statistics-------------------------#
+mean = statistics.mean(data)
+m = statistics.multimode(data)
+if len(m)>len(data):
+    mode = "no mode"
+else:
+    mode = m
+median = statistics.median(data)
+stdev = statistics.stdev(data)
+variance = statistics.variance(data)
+
+
+print("mean = ",mean)
+print("mode= ",mode)
+print("median = ",median)
+print("variance",variance)
+print("standard_dev =",stdev)
+#--------------------math-----------------
+print("Square root of mean:",math.sqrt(mean))
+print("Pow of mean(mean^2)",math.pow(mean,2))
+if mean>0:
+    print("Log value of mean:",math.log(mean))
+else:
+    print("Log is not defined")
+    
+
+#-----------numpy-------------------
+
+arr = np.array(data)
+print("mean = ",np.mean(arr))
+print("sum =",np.sum(arr))
+print("max = ",np.max(arr))
+print("min = ",np.min(arr))
+print("25th percentile = ",np.percentile(data,25))
+print("75Th percentile = ",np.percentile(data,75))
+
+
+#------------------scipy-----------
+
+#basic description
+result = stats.describe(data)
+print("Count = ",result.nobs)
+print("Mean = ",result.mean)
+print("min,max = ",result.minmax)
+print("variance = ",result.variance)
+
+print("kurtosis=",result.kurtosis) #peak 
+print("symmetry=",stats.skew(data)) #symmetry
+
+print("Normalizartion: Z-score :",stats.zscore(data))
+
+
+
+
+
+
+
+sci_np_stat_math.py
+Displaying sci_np_stat_math.py.
+
+
+
+#-------------------------------------------------------------------
 import math
 
 x = 16
@@ -61,4 +157,9 @@ print(a + b) #[3 4 5]
 arr = np.array([[1,2],[3,4]])
 
 print(arr.shape) #(2,2)
+
+
+
+
+#---------------------------------------------------
       
