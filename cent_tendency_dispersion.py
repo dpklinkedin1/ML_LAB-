@@ -1,35 +1,25 @@
-import math
-from collections import Counter
+import statistics
 
-# Step 1: Input
 data = list(map(float, input("Enter numbers: ").split()))
 
-n = len(data)
+mean = statistics.mean(data)
 
-# Mean
-mean = sum(data) / n
 
-# Median
-sorted_data = sorted(data)
-if n % 2 == 0:
-    median = (sorted_data[n//2 - 1] + sorted_data[n//2]) / 2
+median = statistics.median(data)
+
+modes = statistics.multimode(data)
+if len(modes) == len(data):
+    mode = "No mode"
 else:
-    median = sorted_data[n//2]
+    mode = modes
 
-# Mode
-count = Counter(data)
-max_freq = max(count.values())
-mode = [k for k, v in count.items() if v == max_freq]
+variance = statistics.variance(data)
 
-# Variance
-variance = sum((x - mean) ** 2 for x in data) / n
 
-# Standard Deviation
-std_dev = math.sqrt(variance)
+stdev = statistics.stdev(data)
 
-# Output
 print("Mean =", mean)
 print("Median =", median)
 print("Mode =", mode)
 print("Variance =", variance)
-print("Standard Deviation =", std_dev)
+print("Standard Deviation =", stdev)
