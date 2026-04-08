@@ -1,31 +1,4 @@
 
-
-Skip to content
-Using Gmail with screen readers
-1 of 2,502
-codes
-Inbox
-
-praveen edu123 <praveenedu0@gmail.com>
-Attachments
-10:27 AM (3 minutes ago)
-to me
-
-
- 6 Attachments
-  •  Scanned by Gmail
-
-Mail Delivery Subsystem <mailer-daemon@googlemail.com>
-10:27 AM (3 minutes ago)
-to me
-
-Error Icon
-Message blocked
-Your message to praveenedu0@gmail.com has been blocked. See technical details below for more information.
-LEARN MORE
-The response was:
-Message rejected. For more information, go to https://support.google.com/mail/answer/69585
-
 import math
 import numpy as np 
 from scipy import stats
